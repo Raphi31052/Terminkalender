@@ -29,32 +29,25 @@ public class Terminkalender {
     }
 
     public static void read() {
-        Scanner scanner1 = new Scanner(System.in);
-        System.out.println("Welche Zeile?");
-        int Zeile = scanner1.nextInt();
+
+
 
         try {
 
-            File file = new File("meineTextdatei.txt");
-            Scanner reader = new Scanner(file);
-            int lineNumber = 1;
-            --Zeile;
+            File myObj = new File("src/Terminkalender/meineTextdatei.txt");
+            Scanner myReader = new Scanner(myObj);
 
-            while(reader.hasNextLine()) {
-                String line = reader.nextLine();
-                if (lineNumber == Zeile) {
-                    System.out.println("----------------Event---------------");
-                    System.out.println(line);
-                    System.out.println("----------------Event---------------");
-                    break;
-                }
 
-                ++lineNumber;
-            }
 
-            reader.close();
-        } catch (FileNotFoundException var6) {
-            var6.printStackTrace();
+
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+
+            myReader.close();
+        }}
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
     }
@@ -69,14 +62,14 @@ public class Terminkalender {
         System.out.print("Tag eingeben:");
         int day = scanner.nextInt();
         System.out.println("Grund eingeben:");
-        reason = scanner.nextLine();
+        reason = scanner.next();
         if (year >= 0 && month >= 1 && month <= 12 && day >= 0 && day <= 31) {
             String[] textParts = new String[]{(year) + "/" + month + "/" + day + "/" + reason + "\n"};
             String textToWrite = String.join("/", textParts);
             FileWriter writer = null;
 
             try {
-                writer = new FileWriter("meineTextdatei.txt", true);
+                writer = new FileWriter("src/Terminkalender/meineTextdatei.txt", true);
                 writer.write(textToWrite);
                 writer.close();
                 System.out.println("Text wurde in die Datei geschrieben.");
