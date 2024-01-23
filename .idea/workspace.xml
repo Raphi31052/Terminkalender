@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3c7bd29-5250-43d4-96d1-a09a1a579dff" name="Changes" comment="Createt option to create file and to read the file">
-      <change afterPath="$PROJECT_DIR$/src/Terminkalender/meineTextdatei.txt" afterDir="false" />
+    <list default="true" id="e3c7bd29-5250-43d4-96d1-a09a1a579dff" name="Changes" comment="Fixed Bug for create by Userinput wit scanner.next">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Terminkalender/Terminkalender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terminkalender/Terminkalender.java" afterDir="false" />
     </list>
@@ -56,6 +55,14 @@
       <option name="presentableId" value="Default" />
       <updated>1704876883335</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed Bug for create by Userinput wit scanner.next">
+      <created>1706031384982</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706031384982</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,7 +78,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Createt option to create file and to read the file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Createt option to create file and to read the file" />
+    <MESSAGE value="Fixed Bug for create by Userinput wit scanner.next" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Bug for create by Userinput wit scanner.next" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -80,6 +88,11 @@
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Terminkalender/Terminkalender.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
