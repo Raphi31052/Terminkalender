@@ -1,16 +1,13 @@
 package Terminkalender;
 
-import java.io.FileWriter;
+import java.io.*;
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class Terminkalender {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        while(true) {
+        while (true) {
             System.out.print("Befehl Eingeben:");
             String Eingabe = scanner.next();
             if (Eingabe.equals("create")) {
@@ -29,15 +26,36 @@ public class Terminkalender {
     }
 
     public static void read() {
-
+        int userinput = 0;
+        boolean valid = false;
+        boolean exist = false;
+        Scanner input = new Scanner(System.in);
+        while (valid != true) {
+            System.out.println("Bitte Zeile eingeben");
+            userinput = input.nextInt();
+            if (userinput < 0) {
+                System.out.println("Bitte valide Zeile eingeben");
+            } else {
+                valid = true;
+            }
+        }
 
 
         try {
+            int i = 1;
             File myObj = new File("src/Terminkalender/meineTextdatei.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                System.out.println(data);
+                if (i == userinput) {
+                    System.out.println(data);
+                    exist = true;
+
+                }
+                i++;
+            }
+            if(exist!= true){
+                System.out.println("Bitte existierende Zeile eingeben");
             }
             myReader.close();
         } catch (FileNotFoundException e) {

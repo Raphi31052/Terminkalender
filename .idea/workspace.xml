@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3c7bd29-5250-43d4-96d1-a09a1a579dff" name="Changes" comment="Fixed Bug for create by Userinput wit scanner.next">
+    <list default="true" id="e3c7bd29-5250-43d4-96d1-a09a1a579dff" name="Changes" comment="Createt option to create file and to read the file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Terminkalender/Terminkalender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terminkalender/Terminkalender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Terminkalender/meineTextdatei.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terminkalender/meineTextdatei.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,11 +89,6 @@
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Terminkalender/Terminkalender.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
