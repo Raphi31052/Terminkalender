@@ -1,9 +1,15 @@
 package Terminkalender;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.Scanner;
+import java.util.HashMap;
+import java.time.format.DateTimeFormatter;
 
 public class Terminkalender {
+
+    static HashMap<String, String> info = new HashMap<>();
+    String[] splitinfo;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -21,6 +27,9 @@ public class Terminkalender {
 
             if (Eingabe.equals("read")) {
                 read();
+            }
+            if (Eingabe.equals("save")){
+                saveinfo();
             }
         }
     }
@@ -65,20 +74,38 @@ public class Terminkalender {
 
     }
 
-    public static void create() {
-        String reason;
+    public static HashMap<String, String> create() {
+        String Input;
+        String[] splitinfo;
+        String DateString;
+
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Jahr eingeben:");
-        int year = scanner.nextInt();
-        System.out.print("Monat eingeben:");
-        int month = scanner.nextInt();
-        System.out.print("Tag eingeben:");
-        int day = scanner.nextInt();
-        System.out.println("Grund eingeben:");
-        reason = scanner.next();
-        if (year >= 0 && month >= 1 && month <= 12 && day >= 0 && day <= 31) {
-            String[] textParts = new String[]{(year) + "/" + month + "/" + day + "/" + reason + "\n"};
-            String textToWrite = String.join("/", textParts);
+        System.out.print("YY/DD/MM/Reason");
+        Input = scanner.next();
+        splitinfo = Input.split("/");
+
+
+        if (Integer.parseInt(splitinfo[0]) >= 0 && Integer.parseInt(splitinfo[2]) >= 1 && Integer.parseInt(splitinfo[2]) <= 12 && Integer.parseInt(splitinfo[1]) >= 0 && Integer.parseInt(splitinfo[1]) <= 31) {
+
+
+            DateString = splitinfo[0]+("-")+splitinfo[2]+("-")+splitinfo[1];
+            DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate dateformat = LocalDate.parse(DateString);
+            String date = dateformat.format(myFormatObj);
+            //LocalDate datef = LocalDate.parse(date);
+            info.put(date,splitinfo[3]);
+            System.out.println(info.size());
+            return info;
+
+
+
+        }
+
+        return null;
+    }
+    public static void saveinfo() {
+        for (String i : info.keySet()) {
+            String textToWrite = String.join("/", i+info.get(i));
             FileWriter writer = null;
 
             try {
@@ -95,12 +122,16 @@ public class Terminkalender {
                     } catch (IOException var16) {
                         var16.printStackTrace();
                     }
-                }
+                }else{
+                    System.out.print("Falsche Eingabe");
 
             }
-        } else {
-            System.out.print("Falsche Eingabe");
+
         }
 
+        }
     }
-}
+    }
+
+
+

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3c7bd29-5250-43d4-96d1-a09a1a579dff" name="Changes" comment="Createt option to create file and to read the file">
+    <list default="true" id="e3c7bd29-5250-43d4-96d1-a09a1a579dff" name="Changes" comment="created option to read spezific line">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Terminkalender/Terminkalender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terminkalender/Terminkalender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Terminkalender/meineTextdatei.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terminkalender/meineTextdatei.txt" afterDir="false" />
@@ -39,7 +39,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Raphael/IdeaProjects/Terminkalender&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -63,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706031384982</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created option to read spezific line">
+      <created>1706086308159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706086308159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -80,7 +88,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Createt option to create file and to read the file" />
     <MESSAGE value="Fixed Bug for create by Userinput wit scanner.next" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Bug for create by Userinput wit scanner.next" />
+    <MESSAGE value="created option to read spezific line" />
+    <option name="LAST_COMMIT_MESSAGE" value="created option to read spezific line" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -89,6 +98,15 @@
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.time.format.DateTimeParseException" package="java.time.format" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Terminkalender/Terminkalender.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
